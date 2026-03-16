@@ -1,8 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { createClient } from "@/lib/supabase/client"
+import styles from "./page.module.css"
 
 export default function LoginPage() {
 
@@ -14,7 +15,20 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false)
   const [cooldown, setCooldown] = useState(0)
 
-  async function sendCode(e: any) {
+  useEffect(() => {
+    // Si el bypass está activo, no redirigir aunque haya sesión real
+    if (process.env.NEXT_PUBLIC_DEV_AUTH === "true") return
+
+    async function checkSession() {
+      const { data: { user } } = await supabase.auth.getUser()
+      if (user) {
+        router.push("/dashboard")
+      }
+    }
+    checkSession()
+  }, [supabase.auth, router])
+
+  async function sendCode(e: React.SyntheticEvent) {
     e.preventDefault()
 
     if (loading || cooldown > 0) return
@@ -23,8 +37,8 @@ export default function LoginPage() {
 
     try {
 
-      // BYPASS SOLO EN DESARROLLO
-      if (process.env.NODE_ENV === "development") {
+      // BYPASS SOLO EN DESARROLLO (Si se configura en .env.local)
+      if (process.env.NEXT_PUBLIC_DEV_AUTH === "true") {
         console.log("DEV LOGIN BYPASS")
         router.push("/dashboard")
         return
@@ -33,7 +47,7 @@ export default function LoginPage() {
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: {
-          shouldCreateUser: true
+          shouldCreateUser: false
         }
       })
 
@@ -73,7 +87,7 @@ export default function LoginPage() {
         <p>Te enviamos un código de 6 dígitos</p>
 
         <button
-          onClick={() => router.push(`/verify?email=${email}`)}
+          onClick={() => router.push(`/auth/verify?email=${email}`)}
         >
           Ingresar código
         </button>
@@ -91,7 +105,7 @@ export default function LoginPage() {
     )
   }
 
-  return (
+  /*return (
     <form
       onSubmit={sendCode}
       style={{
@@ -125,5 +139,53 @@ export default function LoginPage() {
       </button>
 
     </form>
-  )
+  )*/
+  return (
+    <div className="flex justify-center items-center min-h-screen bg-gray-50 p-4">
+      <form onSubmit={sendCode} className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full">
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-2">Iniciar sesión</h2>
+        <p className="text-sm text-gray-600 text-center mb-6">
+          Ingresa tu correo electrónico y te enviaremos un código de acceso.
+        </p>
+
+        <div className="mb-6">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            Correo electrónico
+          </label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Ingresa tu correo corporativo"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="w-full px-4 py-3 text-gray-700 border border-gray-300 bg-white rounded-lg focus:border-blue-500 focus:ring-3 focus:ring-blue-200 outline-none transition"
+          />
+        </div>
+
+        <button
+          type="submit"
+          disabled={loading || cooldown > 0}
+          className="w-full py-3 px-4 text-base font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600 disabled:opacity-60 disabled:cursor-not-allowed disabled:bg-gray-400 transition flex items-center justify-center"
+        >
+          {loading ? (
+            <span className="flex items-center gap-2">
+              <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+              Enviando...
+            </span>
+          ) : cooldown > 0 ? (
+            `Espera ${cooldown} segundos para reenviar`
+          ) : (
+            "Enviar código"
+          )}
+        </button>
+
+        {cooldown > 0 && (
+          <p className="mt-4 text-xs text-red-600 text-center">
+            Puedes solicitar un nuevo código en {cooldown} segundos.
+          </p>
+        )}
+      </form>
+    </div>
+  );
 }
