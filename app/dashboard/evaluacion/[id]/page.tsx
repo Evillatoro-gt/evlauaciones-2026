@@ -222,6 +222,7 @@ function ContenidoEvaluacion() {
     const [evaluado, setEvaluado] = useState<any>(null);
     const [competencias, setCompetencias] = useState<any[]>([]);
     const [respuestas, setRespuestas] = useState<{ [key: string]: { habilidad: string; ponderacion: string } }>({});
+    const [comentarios, setComentarios] = useState("");
     const [loading, setLoading] = useState(true);
 
     const escalas = {
@@ -304,6 +305,7 @@ function ContenidoEvaluacion() {
             evaluado_id: evaluadoId,
             puesto: evaluado?.puesto,
             datos_competencias: respuestas,
+            comentarios: comentarios,
             token: crypto.randomUUID(),
         });
 
@@ -434,8 +436,22 @@ function ContenidoEvaluacion() {
                             </div>
                         </div>
                     </div>
-                ))}
 
+                ))}
+                    {/*Comentarios*/}
+                        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 space-y-4">
+                        <label className="block text-sm font-semibold text-gray-700 uppercase tracking-wide">
+                            Comentarios adicionales
+                        </label>
+                        <textarea
+                            value={comentarios}
+                            onChange={(e) => setComentarios(e.target.value)}
+                            rows={4}
+                            maxLength={250}
+                            placeholder="Escribe observaciones, fortalezas o áreas de mejora..."
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none bg-white text-gray-700"
+                        />
+                    </div>
                 <button
                     type="submit"
                     className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold text-lg py-4 px-6 rounded-xl shadow-lg transition duration-200"

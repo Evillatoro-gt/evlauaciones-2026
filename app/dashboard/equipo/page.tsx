@@ -182,7 +182,7 @@ export default function DashboardPrincipal() {
 
                 let miPerfil = perfil;
                 if (!miPerfil && process.env.NODE_ENV === 'development') {
-                    miPerfil = { id: authId, nombre: "Elias Villatoro", puesto: "Director", departamento: "Dirección" };
+                    miPerfil = { id: authId, nombre: "Dev Profile", puesto: "Director", departamento: "Dirección" };
                 }
 
                 if (miPerfil) {
@@ -209,8 +209,8 @@ export default function DashboardPrincipal() {
                     console.log('MIEQUIPO', miEquipo)
                     if ((!miEquipo || miEquipo.length === 0) && process.env.NODE_ENV === 'development') {
                         miEquipo = [
-                            { id: "11111111-1111-1111-1111-111111111111", nombre: "Colaborador Mock 1", puesto: "Gerente", departamento: "Operaciones", codigo: "EMP-001", estado: "Pendiente" },
-                            { id: "22222222-2222-2222-2222-222222222222", nombre: "Colaborador Mock 2", puesto: "Analista", departamento: "Ventas", codigo: "EMP-002", estado: "Pendiente" }
+                            /*{ id: "11111111-1111-1111-1111-111111111111", nombre: "Colaborador Mock 1", puesto: "Gerente", departamento: "Operaciones", codigo: "EMP-001", estado: "Pendiente" },
+                            { id: "22222222-2222-2222-2222-222222222222", nombre: "Colaborador Mock 2", puesto: "Analista", departamento: "Ventas", codigo: "EMP-002", estado: "Pendiente" }*/
                         ];
                     }
 

@@ -80,11 +80,11 @@ export default function LoginPage() {
     setLoading(false)
   }
 
-  if (sent) {
+  /*if (sent) {
     return (
       <div style={{ padding: 40 }}>
         <h2>Revisa tu correo</h2>
-        <p>Te enviamos un código de 6 dígitos</p>
+        <p>Te enviamos un código de 8 dígitos</p>
 
         <button
           onClick={() => router.push(`/auth/verify?email=${email}`)}
@@ -103,7 +103,62 @@ export default function LoginPage() {
         )}
       </div>
     )
-  }
+  }*/
+if (sent) {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 px-4">
+      <div className="w-full max-w-md bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg p-8 text-center">
+        {/* Título */}
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">
+          Revisa tu correo
+        </h2>
+
+        {/* Descripción */}
+        <p className="text-sm text-gray-600 mb-6">
+          Te enviamos un código de verificación a <br />
+          <span className="font-medium text-gray-800">{email}</span>
+        </p>
+
+        {/* Botón principal */}
+        <button
+          onClick={() => router.push(`/auth/verify?email=${email}`)}
+          className="w-full py-3 mb-4 rounded-lg font-semibold text-white 
+          bg-gradient-to-r from-blue-500 to-blue-600 
+          hover:from-blue-600 hover:to-blue-700 
+          transition shadow-md"
+        >
+          Ingresar código
+        </button>
+
+        {/* Reenvío */}
+        <button
+          onClick={sendCode}
+          disabled={cooldown > 0 || loading}
+          className="w-full py-2 rounded-lg text-sm font-medium transition
+          disabled:opacity-50 disabled:cursor-not-allowed
+          text-blue-600 hover:bg-blue-50"
+        >
+          {loading ? (
+            <span className="flex items-center justify-center gap-2">
+              <span className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></span>
+              Reenviando...
+            </span>
+          ) : cooldown > 0 ? (
+            `Reenviar en ${cooldown}s`
+          ) : (
+            "Reenviar código"
+          )}
+        </button>
+
+        {/* Hint */}
+        <p className="mt-4 text-xs text-gray-400">
+          El código expira en unos minutos
+        </p>
+
+      </div>
+    </div>
+  )
+}
 
   /*return (
     <form

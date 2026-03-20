@@ -84,6 +84,7 @@ function VerifyForm() {
     const supabase = createClient();
 
     useEffect(() => {
+        if (process.env.NEXT_PUBLIC_DEV_AUTH === "true") return;
         async function checkSession() {
             const { data: { user } } = await supabase.auth.getUser();
             if (user) {
@@ -130,7 +131,7 @@ function VerifyForm() {
                     Verificar código
                 </h2>
                 <p className="text-sm text-gray-600 text-center mb-6">
-                    Ingresa el código de 6 dígitos que enviamos a <strong>{email}</strong>
+                    Ingresa el código de 8 dígitos que enviamos a <strong>{email}</strong>
                 </p>
 
                 <div className="mb-6">
@@ -142,12 +143,12 @@ function VerifyForm() {
                         type="text"
                         inputMode="numeric"
                         pattern="[0-9]*"
-                        placeholder="123456"
+                        placeholder="12345678"
                         value={code}
                         onChange={(e) => setCode(e.target.value)}
                         required
-                        className="w-full px-4 py-3 text-base border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-3 focus:ring-blue-200 outline-none transition"
-                        maxLength={6}
+                        className="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-3 focus:ring-blue-200 outline-none transition bg-white"
+                        maxLength={8}
                     />
                 </div>
 
