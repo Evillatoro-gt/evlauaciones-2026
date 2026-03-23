@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { createClient } from "@/lib/supabase/client"
 import styles from "./page.module.css"
+import Image from "next/image"
 
 export default function LoginPage() {
 
@@ -30,7 +31,12 @@ export default function LoginPage() {
 
   async function sendCode(e: React.SyntheticEvent) {
     e.preventDefault()
-
+/* VALIDACIÓN DE CORREO CORPORATIVO
+    if(!email.endsWith("@grupotritech.com") || process.env.NEXT_PUBLIC_DEV_AUTH === "true") {
+      alert("Por favor, ingresa un correo corporativo de grupotritech.com")
+      return
+    }
+*/
     if (loading || cooldown > 0) return
 
     setLoading(true)
@@ -198,6 +204,13 @@ if (sent) {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-50 p-4">
       <form onSubmit={sendCode} className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full">
+            <Image
+            src="/content/logoTritech.jpg"
+            alt="Logo Tritech"
+            width={250}
+            height={100}
+            className="mb-6 mx-auto"
+          />
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-2">Iniciar sesión</h2>
         <p className="text-sm text-gray-600 text-center mb-6">
           Ingresa tu correo electrónico y te enviaremos un código de acceso.

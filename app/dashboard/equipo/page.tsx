@@ -307,7 +307,28 @@ export default function DashboardPrincipal() {
                         </div>
                     )}
                 </section>
+                    <div>
+                 <button
+                            onClick={handleLogout}
+                            className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
+                                >
+                            Cerrar sesión
+                        </button>
+                    </div>
             </div>
         </div>
+        
     );
+
+
+    async function handleLogout() {
+    const { error } = await supabase.auth.signOut()
+    if (error) {
+        console.error("Error al cerrar sesión:", error)
+        alert("No se pudo cerrar sesión")
+    } else {
+        // Redirige al login
+        window.location.href = "/auth/login"
+    }
+}
 }
