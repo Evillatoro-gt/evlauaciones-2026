@@ -171,8 +171,11 @@ export default async function DashboardContent() {
         <div className="flex justify-center items-center min-h-screen bg-gray-50 p-4">
             <div className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full">
                 <h1 className="text-3xl font-bold text-gray-900 text-center mb-6">
-                    Dashboard
+                    Evaluaciones 2026
                 </h1>
+                <h6 className="text-md text-gray-600 text-center mb-2">
+                    Por favor, valida tu información antes de continuar
+                </h6>
 
                 <div className="space-y-4">
                     <div className="border-b border-gray-200 pb-2">
