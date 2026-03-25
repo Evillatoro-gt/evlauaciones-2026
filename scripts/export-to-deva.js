@@ -262,6 +262,8 @@ async function exportToDEVA() {
 
 exportToDEVA().catch(console.error)*/
 // scripts/export-to-deva.js
+// Para ejecutar este script npm run export:deva
+// Tabla lista para importar a DEVA Y EVA MySQL correctammente
 import { createClient } from '@supabase/supabase-js'
 import fs from 'fs'
 import dotenv from 'dotenv'
@@ -397,9 +399,9 @@ async function exportEvaluaciones() {
   const csvAEVA = parse(rowsAEVA)
   fs.writeFileSync('output/AEVA_import.csv', csvAEVA)
 
-  console.log(`✅ DEVA: ${rowsDEVA.length} filas`)
-  console.log(`✅ AEVA: ${rowsAEVA.length} filas`)
-  console.log('📁 Archivos generados en /output')
+  console.log(`DEVA: ${rowsDEVA.length} filas`)
+  console.log(`AEVA: ${rowsAEVA.length} filas`)
+  console.log('Archivos generados en /output')
 }
 
 exportEvaluaciones().catch(console.error)

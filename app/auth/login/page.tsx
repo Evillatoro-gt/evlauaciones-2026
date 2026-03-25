@@ -66,7 +66,7 @@ export default function LoginPage() {
       setSent(true)
 
       // cooldown para evitar rate limit
-      setCooldown(30)
+      setCooldown(60)
 
       const timer = setInterval(() => {
         setCooldown((c) => {
