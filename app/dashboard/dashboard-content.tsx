@@ -100,7 +100,7 @@ export default async function DashboardContent() {
     const {
         data: { user },
     } = await supabase.auth.getUser();
-    console.log("Usuario registrado", user);
+    //console.log("Usuario registrado", user);
 
     if (!user && process.env.NEXT_PUBLIC_DEV_AUTH !== "true") {
         redirect("/auth/login");

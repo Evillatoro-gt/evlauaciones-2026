@@ -31,12 +31,12 @@ export default function LoginPage() {
 
   async function sendCode(e: React.SyntheticEvent) {
     e.preventDefault()
-/* VALIDACIÓN DE CORREO CORPORATIVO
-    if(!email.endsWith("@grupotritech.com") || process.env.NEXT_PUBLIC_DEV_AUTH === "true") {
-      alert("Por favor, ingresa un correo corporativo de grupotritech.com")
-      return
-    }
-*/
+    /* VALIDACIÓN DE CORREO CORPORATIVO
+        if(!email.endsWith("@grupotritech.com") || process.env.NEXT_PUBLIC_DEV_AUTH === "true") {
+          alert("Por favor, ingresa un correo corporativo de grupotritech.com")
+          return
+        }
+    */
     if (loading || cooldown > 0) return
 
     setLoading(true)
@@ -45,7 +45,7 @@ export default function LoginPage() {
 
       // BYPASS SOLO EN DESARROLLO (Si se configura en .env.local)
       if (process.env.NEXT_PUBLIC_DEV_AUTH === "true") {
-        console.log("DEV LOGIN BYPASS")
+        //console.log("DEV LOGIN BYPASS")
         router.push("/dashboard")
         return
       }
@@ -110,61 +110,61 @@ export default function LoginPage() {
       </div>
     )
   }*/
-if (sent) {
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 px-4">
-      <div className="w-full max-w-md bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg p-8 text-center">
-        {/* Título */}
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
-          Revisa tu correo
-        </h2>
+  if (sent) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 px-4">
+        <div className="w-full max-w-md bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg p-8 text-center">
+          {/* Título */}
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            Revisa tu correo
+          </h2>
 
-        {/* Descripción */}
-        <p className="text-sm text-gray-600 mb-6">
-          Te enviamos un código de verificación a <br />
-          <span className="font-medium text-gray-800">{email}</span>
-        </p>
+          {/* Descripción */}
+          <p className="text-sm text-gray-600 mb-6">
+            Te enviamos un código de verificación a <br />
+            <span className="font-medium text-gray-800">{email}</span>
+          </p>
 
-        {/* Botón principal */}
-        <button
-          onClick={() => router.push(`/auth/verify?email=${email}`)}
-          className="w-full py-3 mb-4 rounded-lg font-semibold text-white 
+          {/* Botón principal */}
+          <button
+            onClick={() => router.push(`/auth/verify?email=${email}`)}
+            className="w-full py-3 mb-4 rounded-lg font-semibold text-white 
           bg-gradient-to-r from-blue-500 to-blue-600 
           hover:from-blue-600 hover:to-blue-700 
           transition shadow-md"
-        >
-          Ingresar código
-        </button>
+          >
+            Ingresar código
+          </button>
 
-        {/* Reenvío */}
-        <button
-          onClick={sendCode}
-          disabled={cooldown > 0 || loading}
-          className="w-full py-2 rounded-lg text-sm font-medium transition
+          {/* Reenvío */}
+          <button
+            onClick={sendCode}
+            disabled={cooldown > 0 || loading}
+            className="w-full py-2 rounded-lg text-sm font-medium transition
           disabled:opacity-50 disabled:cursor-not-allowed
           text-blue-600 hover:bg-blue-50"
-        >
-          {loading ? (
-            <span className="flex items-center justify-center gap-2">
-              <span className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></span>
-              Reenviando...
-            </span>
-          ) : cooldown > 0 ? (
-            `Reenviar en ${cooldown}s`
-          ) : (
-            "Reenviar código"
-          )}
-        </button>
+          >
+            {loading ? (
+              <span className="flex items-center justify-center gap-2">
+                <span className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></span>
+                Reenviando...
+              </span>
+            ) : cooldown > 0 ? (
+              `Reenviar en ${cooldown}s`
+            ) : (
+              "Reenviar código"
+            )}
+          </button>
 
-        {/* Hint */}
-        <p className="mt-4 text-xs text-gray-400">
-          El código expira en unos minutos
-        </p>
+          {/* Hint */}
+          <p className="mt-4 text-xs text-gray-400">
+            El código expira en unos minutos
+          </p>
 
+        </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
 
   /*return (
     <form
@@ -204,13 +204,13 @@ if (sent) {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-50 p-4">
       <form onSubmit={sendCode} className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full">
-            <Image
-            src="/content/logoTritech.jpg"
-            alt="Logo Tritech"
-            width={250}
-            height={100}
-            className="mb-6 mx-auto"
-          />
+        <Image
+          src="/content/logoTritech.jpg"
+          alt="Logo Tritech"
+          width={250}
+          height={100}
+          className="mb-6 mx-auto"
+        />
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-2">Iniciar sesión</h2>
         <p className="text-sm text-gray-600 text-center mb-6">
           Ingresa tu correo electrónico y te enviaremos un código de acceso.

@@ -48,7 +48,7 @@ export async function updateSession(request: NextRequest) {
   const user = data?.claims;
 
   // Bypass en entorno de desarrollo
-  const isDevelopment = process.env.NODE_ENV === 'development';
+  const isDevelopment = process.env.NEXT_PUBLIC_DEV_AUTH === "true";
 
   if (
     request.nextUrl.pathname !== "/" &&

@@ -125,28 +125,28 @@ function ContenidoEvaluacion() {
 
                 {/* SECCIÓN ENCABEZADO *//*}
 <div className="grid grid-cols-1 gap-6 border-b pb-8">
-    <div>
-        <h1 className="text-2xl font-bold text-center text-gray-800 mb-4 border-b pb-2">Evaluación de Competencias</h1>
-        <label className="block text-sm font-bold text-gray-700 uppercase">Seleccione su nombre y apellido</label>
-        <select className="mt-1 block w-full p-3 border rounded-md bg-gray-100 text-black" disabled>
-            <option>{evaluador?.nombre || "Cargando..."}</option>
-        </select>
-    </div>
+<div>
+<h1 className="text-2xl font-bold text-center text-gray-800 mb-4 border-b pb-2">Evaluación de Competencias</h1>
+<label className="block text-sm font-bold text-gray-700 uppercase">Seleccione su nombre y apellido</label>
+<select className="mt-1 block w-full p-3 border rounded-md bg-gray-100 text-black" disabled>
+<option>{evaluador?.nombre || "Cargando..."}</option>
+</select>
+</div>
 
-    <div>
-        <label className="block text-sm font-bold text-gray-700 uppercase">Seleccione la persona a evaluar</label>
-        <select className="mt-1 block w-full p-3 border rounded-md bg-gray-100 text-black" disabled>
-            <option>{evaluado?.nombre || "Cargando..."}</option>
-        </select>
-    </div>
+<div>
+<label className="block text-sm font-bold text-gray-700 uppercase">Seleccione la persona a evaluar</label>
+<select className="mt-1 block w-full p-3 border rounded-md bg-gray-100 text-black" disabled>
+<option>{evaluado?.nombre || "Cargando..."}</option>
+</select>
+</div>
 
-    <div>
-        <label className="block text-sm font-bold text-gray-700 uppercase">Puesto de trabajo</label>
-        <div className="mt-1 p-3 border rounded-md bg-blue-50 text-blue-800 font-semibold">
-            {evaluado?.puesto}
-        </div>
-        <p className="text-sm text-gray-600 mt-2">El siguiente formulario debe llenarse evaluando las capacidades descritas en el archivo "Definición de competencias".</p>
-    </div>
+<div>
+<label className="block text-sm font-bold text-gray-700 uppercase">Puesto de trabajo</label>
+<div className="mt-1 p-3 border rounded-md bg-blue-50 text-blue-800 font-semibold">
+{evaluado?.puesto}
+</div>
+<p className="text-sm text-gray-600 mt-2">El siguiente formulario debe llenarse evaluando las capacidades descritas en el archivo "Definición de competencias".</p>
+</div>
 </div>
 
 {/* SECCIÓN COMPETENCIAS *//*}
@@ -158,21 +158,21 @@ function ContenidoEvaluacion() {
 
         {/* Escala 1: Habilidades *//*}
 <div>
-    <p className="text-sm font-bold text-gray-600 mb-2"> HABILIDADES:</p>
-    <div className="grid grid-cols-1 md:grid-cols-5 gap-2">
-        {escalas.habilidad.map(op => (
-            <label key={op} className="flex flex-col items-center p-2 border rounded bg-white hover:bg-blue-100 cursor-pointer text-center text-black">
-                <input
-                    type="radio"
-                    required
-                    name={`hab-${comp.id}`}
-                    onChange={() => handleUpdateResponse(comp.competencia, 'habilidad', op)}
-                    className="mb-2"
-                />
-                <span className="text-[10px] leading-tight font-medium">{op}</span>
-            </label>
-        ))}
-    </div>
+<p className="text-sm font-bold text-gray-600 mb-2"> HABILIDADES:</p>
+<div className="grid grid-cols-1 md:grid-cols-5 gap-2">
+{escalas.habilidad.map(op => (
+<label key={op} className="flex flex-col items-center p-2 border rounded bg-white hover:bg-blue-100 cursor-pointer text-center text-black">
+<input
+type="radio"
+required
+name={`hab-${comp.id}`}
+onChange={() => handleUpdateResponse(comp.competencia, 'habilidad', op)}
+className="mb-2"
+/>
+<span className="text-[10px] leading-tight font-medium">{op}</span>
+</label>
+))}
+</div>
 </div>
 
 {/* Escala 2: Ponderación *//*}
@@ -212,6 +212,7 @@ return <Suspense fallback={null}><ContenidoEvaluacion /></Suspense>;
 import { useEffect, useState, Suspense } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import Link from "next/link";
 
 function ContenidoEvaluacion() {
     const { id: evaluadoId } = useParams();
@@ -238,14 +239,14 @@ function ContenidoEvaluacion() {
 
             if (authUser) {
                 evalId = authUser.id;
-            } else if (process.env.NODE_ENV === 'development') {
+            } else if (process.env.NEXT_PUBLIC_DEV_AUTH === "true") {
                 evalId = '5fb9c280-2c69-4398-955c-4350c9ebc722';
             }
 
             if (evalId) {
                 const { data: profile } = await supabase.from("users").select("nombre").eq("id", evalId).single();
                 let evaluadorData = profile;
-                if (!evaluadorData && process.env.NODE_ENV === 'development') {
+                if (!evaluadorData && process.env.NEXT_PUBLIC_DEV_AUTH === "true") {
                     evaluadorData = { nombre: "Elias Villatoro" };
                 }
                 setEvaluador(evaluadorData);
@@ -254,7 +255,7 @@ function ContenidoEvaluacion() {
             const { data: user } = await supabase.from("users").select("*").eq("id", evaluadoId).single();
             let evaluadoData = user;
 
-            if (!evaluadoData && process.env.NODE_ENV === 'development') {
+            if (!evaluadoData && process.env.NEXT_PUBLIC_DEV_AUTH === "true") {
                 evaluadoData = { id: evaluadoId, nombre: "Evaluado de Prueba", puesto: "Desarrollador" };
             }
 
@@ -263,7 +264,7 @@ function ContenidoEvaluacion() {
                 const { data: pond } = await supabase.from("idealpond").select("*").eq("puesto", evaluadoData.puesto);
                 let competenciasData = pond;
 
-                if ((!competenciasData || competenciasData.length === 0) && process.env.NODE_ENV === 'development') {
+                if ((!competenciasData || competenciasData.length === 0) && process.env.NEXT_PUBLIC_DEV_AUTH === "true") {
                     competenciasData = [
                         { id: 1, competencia: "Comunicación Efectiva", puesto: evaluadoData.puesto },
                         { id: 2, competencia: "Liderazgo", puesto: evaluadoData.puesto },
@@ -293,7 +294,7 @@ function ContenidoEvaluacion() {
         let evalId: string | null = null;
         const { data: { user: authUser } } = await supabase.auth.getUser();
         if (authUser) evalId = authUser.id;
-        else if (process.env.NODE_ENV === 'development') evalId = '5fb9c280-2c69-4398-955c-4350c9ebc722';
+        else if (process.env.NEXT_PUBLIC_DEV_AUTH === "true") evalId = '5fb9c280-2c69-4398-955c-4350c9ebc722';
 
         if (!evalId) {
             alert("Error: No se pudo identificar al evaluador.");
@@ -335,6 +336,12 @@ function ContenidoEvaluacion() {
 
     return (
         <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto mb-6">
+                <Link href="/dashboard/equipo" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition font-medium text-sm bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Volver al Dashboard
+                </Link>
+            </div>
             <form onSubmit={handleSubmit} className="max-w-5xl mx-auto space-y-8">
                 {/* ENCABEZADO */}
                 <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 space-y-6">
@@ -438,20 +445,20 @@ function ContenidoEvaluacion() {
                     </div>
 
                 ))}
-                    {/*Comentarios*/}
-                        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 space-y-4">
-                        <label className="block text-sm font-semibold text-gray-700 uppercase tracking-wide">
-                            Comentarios adicionales
-                        </label>
-                        <textarea
-                            value={comentarios}
-                            onChange={(e) => setComentarios(e.target.value)}
-                            rows={4}
-                            maxLength={250}
-                            placeholder="Escribe observaciones, fortalezas o áreas de mejora..."
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none bg-white text-gray-700"
-                        />
-                    </div>
+                {/*Comentarios*/}
+                <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 space-y-4">
+                    <label className="block text-sm font-semibold text-gray-700 uppercase tracking-wide">
+                        Comentarios adicionales
+                    </label>
+                    <textarea
+                        value={comentarios}
+                        onChange={(e) => setComentarios(e.target.value)}
+                        rows={4}
+                        maxLength={250}
+                        placeholder="Escribe observaciones, fortalezas o áreas de mejora..."
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none bg-white text-gray-700"
+                    />
+                </div>
                 <button
                     type="submit"
                     className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold text-lg py-4 px-6 rounded-xl shadow-lg transition duration-200"
