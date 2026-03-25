@@ -1,4 +1,5 @@
-//require('dotenv').config({ path: '../.env.local' }); // Cargar .env.local si se ejecuta en /scripts
+// Para ejecutarlo: node scripts/import-users.js
+//require('dotenv').config({ path: '../.env.local' }); 
 const fs = require('fs');
 const csv = require('csv-parser');
 const { createClient } = require('@supabase/supabase-js');

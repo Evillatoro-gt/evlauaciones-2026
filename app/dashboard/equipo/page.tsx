@@ -259,12 +259,14 @@ export default function DashboardPrincipal() {
                             Panel de Admin
                         </Link>
                     )}
-                    <button
-                        onClick={handleLogout}
-                        className="px-4 py-2 bg-red-50 text-red-600 font-semibold rounded-lg hover:bg-red-100 transition text-sm text-center"
-                    >
-                        Cerrar sesión
-                    </button>
+                    {(usuarioActual?.admin || process.env.NEXT_PUBLIC_DEV_AUTH === 'true') && (
+                        <button
+                            onClick={handleLogout}
+                            className="px-4 py-2 bg-red-50 text-red-600 font-semibold rounded-lg hover:bg-red-100 transition text-sm text-center"
+                        >
+                            Cerrar sesión
+                        </button>
+                    )}
                 </div>
             </nav>
 
