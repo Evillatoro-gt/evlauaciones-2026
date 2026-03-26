@@ -213,11 +213,13 @@ import { useEffect, useState, Suspense } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import Link from "next/link";
+import { useSnackbar } from "@/components/ui/snackbar";
 
 function ContenidoEvaluacion() {
     const { id: evaluadoId } = useParams();
     const router = useRouter();
     const supabase = createClient();
+    const { showSnackbar, SnackbarComponent } = useSnackbar();
 
     const [evaluador, setEvaluador] = useState<any>(null);
     const [evaluado, setEvaluado] = useState<any>(null);
@@ -297,7 +299,7 @@ function ContenidoEvaluacion() {
         else if (process.env.NEXT_PUBLIC_DEV_AUTH === "true") evalId = '5fb9c280-2c69-4398-955c-4350c9ebc722';
 
         if (!evalId) {
-            alert("Error: No se pudo identificar al evaluador.");
+            showSnackbar("Error: No se pudo identificar al evaluador.", "error");
             return;
         }
 
@@ -317,10 +319,12 @@ function ContenidoEvaluacion() {
                 evaluado_id: evaluadoId,
             });
 
-            alert("Evaluación completada exitosamente");
-            router.push("/dashboard/equipo");
+            showSnackbar("Evaluación completada exitosamente", "success");
+            setTimeout(() => {
+                router.push("/dashboard/equipo");
+            }, 1500);
         } else {
-            alert("Verifica la consola. Ocurrió un error al guardar.");
+            showSnackbar("Verifica la consola. Ocurrió un error al guardar.", "error");
             console.error(error);
         }
     };
@@ -466,6 +470,7 @@ function ContenidoEvaluacion() {
                     ENVIAR EVALUACIÓN
                 </button>
             </form>
+            <SnackbarComponent />
         </div>
     );
 }

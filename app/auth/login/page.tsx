@@ -5,8 +5,10 @@ import { useRouter } from "next/navigation"
 import { createClient } from "@/lib/supabase/client"
 import styles from "./page.module.css"
 import Image from "next/image"
+import { useSnackbar } from "@/components/ui/snackbar"
 
 export default function LoginPage() {
+  const { showSnackbar, SnackbarComponent } = useSnackbar()
 
   const supabase = createClient()
   const router = useRouter()
@@ -58,12 +60,17 @@ export default function LoginPage() {
       })
 
       if (error) {
-        alert(error.message)
+        if (error.message.includes("Signups not allowed for otp") || error.message.includes("Signups not allowed")) {
+          showSnackbar("El correo electronico no esta registrado.", "warning")
+        } else {
+          showSnackbar(error.message, "error")
+        }
         setLoading(false)
         return
       }
 
       setSent(true)
+      showSnackbar("Código enviado exitosamente", "success")
 
       // cooldown para evitar rate limit
       setCooldown(180)
@@ -80,7 +87,7 @@ export default function LoginPage() {
 
     } catch (err) {
       console.error(err)
-      alert("Error enviando código")
+      showSnackbar("Error enviando código", "error")
     }
 
     setLoading(false)
@@ -156,12 +163,12 @@ export default function LoginPage() {
             )}
           </button>
 
-          {/* Hint */}
           <p className="mt-4 text-xs text-gray-400">
             El código expira en unos minutos
           </p>
 
         </div>
+        <SnackbarComponent />
       </div>
     )
   }
@@ -254,6 +261,7 @@ export default function LoginPage() {
           </p>
         )}
       </form>
+      <SnackbarComponent />
     </div>
   );
 }

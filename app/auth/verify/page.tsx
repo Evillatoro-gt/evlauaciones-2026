@@ -75,8 +75,10 @@ export default function VerifyPage() {
 import { useState, Suspense, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import { useSnackbar } from "@/components/ui/snackbar";
 
 function VerifyForm() {
+    const { showSnackbar, SnackbarComponent } = useSnackbar();
     const router = useRouter();
     const params = useSearchParams();
     const email = params.get("email");
@@ -96,15 +98,13 @@ function VerifyForm() {
 
     const [code, setCode] = useState("");
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
 
     async function verify(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         setLoading(true);
-        setError("");
 
         if (!email) {
-            setError("Falta el correo electrónico para verificar");
+            showSnackbar("Falta el correo electrónico para verificar", "error");
             setLoading(false);
             return;
         }
@@ -118,9 +118,10 @@ function VerifyForm() {
         setLoading(false);
 
         if (!error) {
+            showSnackbar("Código verificado exitosamente", "success");
             router.push("/dashboard");
         } else {
-            setError("Código inválido. Intenta nuevamente.");
+            showSnackbar("Código inválido. Intenta nuevamente.", "error");
         }
     }
 
@@ -152,10 +153,6 @@ function VerifyForm() {
                     />
                 </div>
 
-                {error && (
-                    <p className="mb-4 text-sm text-red-600 text-center">{error}</p>
-                )}
-
                 <button
                     type="submit"
                     disabled={loading}
@@ -179,6 +176,7 @@ function VerifyForm() {
                     ← Volver al inicio
                 </button>
             </form>
+            <SnackbarComponent />
         </div>
     );
 }
