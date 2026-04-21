@@ -123,7 +123,7 @@ export default function AdminVisualizador() {
   });
 
   const totalGlobal = usuarios.length;
-  const usuariosCompletadosCount = usuarios.filter(u => evaluadoresCompletados.has(u.id) || u.estado === "Completado").length;
+  const usuariosCompletadosCount = usuarios.filter(u => evaluadoresCompletados.has(u.id) || u.estado === "Completada").length;
   const porcentajeGlobal = totalGlobal === 0 ? 0 : Math.round((usuariosCompletadosCount / totalGlobal) * 100);
 
   return (

@@ -1,0 +1,135 @@
+﻿Nombre,Puesto,País,Departamento,Jefe,Correo del usuario,Correo Jefe,Autoevaluacion(si/no),Evaluado(si/no)
+Armando Centeno López,GERENTE DE VENTAS,MEXICO,VENTAS,Alfonso José Irungaray Pellecer,acenteno@grupotritech.com,airungaray@grupotritech.com,No,No
+Aurelio Quezada Ramirez,ASESOR TECNICO,MEXICO,VENTAS,Jesús Fierro Rodríguez,aquezada@grupotritech.com,jfierro@grupotritech.com,No,No
+Bernardino Mireles Maldonado,ASESOR TECNICO,MEXICO,VENTAS,José Antonio Maqueda Tapia,bmireles@grupotritech.com,jamaqueda@grupotritech.com,No,No
+Carlos Iván Amezquita Pérez,ASESOR DE VENTAS,MEXICO,VENTAS,David Farabundo Pérez González,camezquita@grupotritech.com,dperez@grupotritech.com,No,No
+Citlalli Clemente Damaso,ANALISTA CONTABLE,MEXICO,ADMINISTRACION,Julio Cesar Jiménez Fragoso,cclemente@grupotritech.com,jcjimenez@grupotritech.com,No,No
+Claudia Patricia Ríos Martinez,ASESOR DE VENTAS,COLOMBIA,VENTAS,José Luis Ezquerra Galiano,crios@grupotritech.com,jezquerra@grupotritech.com,No,No
+Daniel Arturo Palomo Martínez,ASESOR TECNICO,GUATEMALA,VENTAS,Moises Arnoldo Giron Ramirez/José Luis Ezquerra Galiano,dpalomo@grupotritech.com,"mgiron@grupotritech.com, jezquerra@grupotritech.com",No,No
+David Antonio Pérez Canjura,BODEGUERO,EL SALVADOR,OPERACIONES,Carmen Isabel Pérez Rodriguez,david.perez@grupotritech.com,cperez@grupotritech.com,No,No
+David Farabundo Pérez González,GERENTE DE VENTAS,MEXICO,VENTAS,Alfonso José Irungaray Pellecer,dperez@grupotritech.com,airungaray@grupotritech.com,No,No
+Diego Gerardo Gonzalez Castillo,ASESOR TECNICO,MEXICO,VENTAS,Jesús Fierro Rodríguez,ggonzalez@grupotritech.com,jfierro@grupotritech.com,No,No
+Elio Alejandro Mata Hernández,INGENIERO DE SERVICIO,HONDURAS,VENTAS,Manuel Roberto Campos Perez,emata@grupotritech.com,mcampos@grupotritech.com,No,No
+Adalberto García Diaz,ASESOR TECNICO,MEXICO,VENTAS,José Antonio Maqueda Tapia,agarcia@grupotritech.com,jamaqueda@grupotritech.com,No,No
+Agustín Hernandez Celis,ASESOR TECNICO,MEXICO,VENTAS,José Antonio Maqueda Tapia,acelis@grupotritech.com,jamaqueda@grupotritech.com,No,No
+Alejandro Peña Zambrano,ASESOR TECNICO,COLOMBIA,VENTAS,Leonardo Mata Arrieta,apena@grupotritech.com,lmata@grupotritech.com,No,No
+Claudio Villalobos Monestel,CONTADOR GENERAL SENIOR,COSTA RICA,ADMINISTRACION,Jorge Antonio De León Pinillos,cvillalobos@grupotritech.com,jdeleon@grupotritech.com,Si,Si
+Cesar Brian Reyes Castrejon,ASESOR DE VENTAS,MEXICO,VENTAS,Armando Centeno López,breyes@grupotritech.com,acenteno@grupotritech.com,Si,No
+Ana Gabriela Bruno Beltrán,GERENTE DE OPERACIONES,MEXICO,OPERACIONES,Ignacio Quiros Amieva,abeltran@grupotritech.com,iquiros@grupotritech.com,No,Si
+Dayana Vanessa Pérez Mejía,ASESOR DE VENTAS,COLOMBIA,VENTAS,Leonardo Mata Arrieta,vperez@grupotritech.com,lmata@grupotritech.com,Si,No
+David Ernesto Arévalo Linares,ASESOR DE VENTAS,EL SALVADOR,VENTAS,Manuel Roberto Campos Perez,darevalo@grupotritech.com,mcampos@grupotritech.com,Si,No
+Dairin Noemi González Pellecer,COORDINADOR LOGISTICA,GUATEMALA,OPERACIONES,José Javier Posadas Morales,dgonzalez@grupotritech.com,jposadas@grupotritech.com,Si,No
+Alexis Alan Almanzar Arellano,ASESOR TECNICO,MEXICO,VENTAS,David Farabundo Pérez González,aalmanzar@grupotritech.com,dperez@grupotritech.com,Si,No
+Edivaldo Arizay Espino Trejo,ASESOR DE VENTAS,MEXICO,VENTAS,Armando Centeno López,eespino@grupotritech.com,acenteno@grupotritech.com,Si,No
+Efrain Enrique Calderón Quesada,ASESOR TECNICO,COSTA RICA,VENTAS,Leonardo Mata Arrieta,ecalderon@grupotritech.com,lmata@grupotritech.com,Si,No
+Carmen Verónica Velásquez Reyes,CONTADOR GENERAL SENIOR,GUATEMALA,ADMINISTRACION,Jorge Antonio De León Pinillos,vvelasquez@grupotritech.com,jdeleon@grupotritech.com,No,Si
+Carla Patricia Alvarez Luna,CONTRALORA GENERAL,NICARAGUA,ADMINISTRACION,Jorge Antonio De León Pinillos,calvarez@grupotritech.com,jdeleon@grupotritech.com,No,Si
+Carmen Isabel Pérez Rodriguez,COORDINADORA REGIONAL DE OPERACIONES,GUATEMALA,OPERACIONES,Ignacio Quiros Amieva,cperez@grupotritech.com,iquiros@grupotritech.com,No,Si
+Alfonso José Irungaray Pellecer,GERENTE DE VENTAS REGIONAL,GUATEMALA,DIRECCION GENERAL,Ignacio Quiros Amieva,airungaray@grupotritech.com,iquiros@grupotritech.com,No,Si
+Bernardo Humberto Murillo Murillo,ASESOR DE VENTAS,COSTA RICA,VENTAS,Leonardo Mata Arrieta,bmurillo@grupotritech.com,lmata@grupotritech.com,No,Si
+Ariel Aimar Arosemena Rodriguez,ASESOR TECNICO,PANAMA,VENTAS,Ronald Efraín Paz Ovalle,aarosemena@grupotritech.com,rpaz@grupotritech.com,Si,Si
+Adriano Dipre Figuereo,INGENIERO DE SERVICIO,DOMINICANA,VENTAS,Ronald Efraín Paz Ovalle,adipre@grupotritech.com,rpaz@grupotritech.com,Si,Si
+Benjamín Puente Santana,INGENIERO DE SERVICIO,MEXICO,VENTAS,David Farabundo Pérez González,bpuente@grupotritech.com,dperez@grupotritech.com,Si,No
+Bernardo Antonio Abreu Pérez,ASESOR TECNICO,DOMINICANA,VENTAS,Ronald Efraín Paz Ovalle,babreu@grupotritech.com,rpaz@grupotritech.com,No,Si
+Abel Beltrán Vasquez,INGENIERO DE SERVICIO,DOMINICANA,VENTAS,Ronald Efraín Paz Ovalle,avasquez@grupotritech.com,rpaz@grupotritech.com,No,Si
+Eddy Yanny Franjul Germán,ASESOR DE VENTAS,DOMINICANA,VENTAS,Jorge Guillermo Cruz-Gomar Maldonado/Ronald Efraín Paz Ovalle,efranjul@grupotritech.com,rpaz@grupotritech.com,No,Si
+Elizabeth Velazquez Dominguez,ANALISTA DE IMPUESTOS,MEXICO,ADMINISTRACION,Julio Cesar Jiménez Fragoso,evelazquez@grupotritech.com,jcjimenez@grupotritech.com,No,No
+Ernesto Savador Avellan Garcia,ASESOR TECNICO,NICARAGUA,VENTAS,Manuel Roberto Campos Perez,eavellan@grupotritech.com,mcampos@grupotritech.com,No,No
+Estuardo Andrés Sánchez Rodriguez,INGENIERO DE SERVICIO,GUATEMALA,VENTAS,Moises Arnoldo Giron Ramirez/José Luis Ezquerra Galiano,esanchez@grupotritech.com,"mgiron@grupotritech.com, jezquerra@grupotritech.com",No,No
+Fernando Aldair Garnica Zetina,REPARTO,MEXICO,OPERACIONES,Zuly Daisy Guerra Santos,despacho.centro@grupotritech.com,sac.centro@grupotritech.com,No,No
+Francisco Javier Fernández Figueroa,INGENIERO DE SERVICIO,GUATEMALA,VENTAS,Moises Arnoldo Giron Ramirez/José Luis Ezquerra Galiano,jfernandez@grupotritech.com,"mgiron@grupotritech.com, jezquerra@grupotritech.com",No,No
+Francisco Javier Perez Barrera,BODEGUERO,MEXICO,OPERACIONES,Zuly Daisy Guerra Santos,almacen.centro@grupotritech.com,sac.centro@grupotritech.com,No,No
+German Contreras Luna,ASESOR TECNICO,MEXICO,VENTAS,José Antonio Maqueda Tapia,gcontreras@grupotritech.com,jamaqueda@grupotritech.com,No,No
+Habid Enrique Pérez Blanco,INGENIERO DE SERVICIO,COLOMBIA,VENTAS,José Luis Ezquerra Galiano,hperez@grupotritech.com,jezquerra@grupotritech.com,No,No
+Hersy Laureano Vanegas Reyes,ASESOR TECNICO,NICARAGUA,VENTAS,Manuel Roberto Campos Perez,hvanegas@grupotritech.com,mcampos@grupotritech.com,No,No
+Hugo Alberto González Ortiz,ASESOR DE VENTAS,MEXICO,VENTAS,Roberto Marquez Merino,hgonzalez@grupotritech.com,rmarquez@grupotritech.com,No,No
+Humberto Olivas Chavez,ASESOR DE VENTAS,MEXICO,VENTAS,David Farabundo Pérez González,holivas@grupotritech.com,dperez@grupotritech.com,No,No
+Jesús Fierro Rodríguez,GERENTE DE VENTAS,MEXICO,VENTAS,Alfonso José Irungaray Pellecer,jfierro@grupotritech.com,airungaray@grupotritech.com,No,No
+Jesus Rafael Croda Molina,ASESOR DE VENTAS,MEXICO,VENTAS,José Antonio Maqueda Tapia,rcroda@grupotritech.com,jamaqueda@grupotritech.com,No,No
+José Antonio Maqueda Tapia,GERENTE DE VENTAS,MEXICO,VENTAS,Alfonso José Irungaray Pellecer,jamaqueda@grupotritech.com,airungaray@grupotritech.com,No,No
+José Luis Olvera Ramírez,INGENIERO DE SERVICIO,MEXICO,VENTAS,Jesús Fierro Rodríguez,jolvera@grupotritech.com,jfierro@grupotritech.com,No,No
+José Luis Ezquerra Galiano,GERENTE DE VENTAS,GUATEMALA,VENTAS,Jorge Guillermo Cruz-Gomar Maldonado,jezquerra@grupotritech.com,gcruzgomar@grupotritech.com,No,Si
+Jaziel Alejandro Salinas Solis,INGENIERO DE SERVICIO,MEXICO,VENTAS,Jesús Fierro Rodríguez,jsalinas@grupotritech.com,jfierro@grupotritech.com,Si,No
+Emmanuel Isaac Morales Blackman,BODEGUERO,PANAMA,OPERACIONES,Paula Fabiola Chaves Benavides,sac.panama@grupotritech.com,fchaves@grupotritech.com,Si,No
+Jorge Antonio De León Pinillos,DIRECTOR ADMINISTRATIVO,GUATEMALA,DIRECCION GENERAL,Ignacio Quiros Amieva,jdeleon@grupotritech.com,iquiros@grupotritech.com,Si,Si
+Francisco Javier Ordoñez Duron,ASESOR DE VENTAS,HONDURAS,VENTAS,Manuel Roberto Campos Perez,fordonez@grupotritech.com,mcampos@grupotritech.com,Si,No
+Gilberto Andrade Viascan,GERENTE DE CAPACITACION,MEXICO,VENTAS,Ignacio Quiros Amieva,gandrade@grupotritech.com,iquiros@grupotritech.com,No,Si
+Estrella Rubí Palencia Monzón,ANALISTA CONTABLE,GUATEMALA,ADMINISTRACION,Farid Daniel Dubon Vielman,epalencia@grupotritech.com,ddubon@grupotritech.com,No,Si
+Everardo Paul Arenas Castro,INGENIERO DE SERVICIO,MEXICO,VENTAS,Armando Centeno López,earenas@grupotritech.com,acenteno@grupotritech.com,Si,No
+Javier Oswaldo Guzmán Cordón,INGENIERO DE SERVICIO,GUATEMALA,VENTAS,Moises Arnoldo Giron Ramirez/José Luis Ezquerra Galiano,oguzman@grupotritech.com,"mgiron@grupotritech.com, jezquerra@grupotritech.com",Si,No
+Jorge Daniel Yanes Ucles,CONTADOR GENERAL SENIOR,HONDURAS,ADMINISTRACION,Jorge Antonio De León Pinillos,jyanes@grupotritech.com,jdeleon@grupotritech.com,No,Si
+Farid Daniel Dubon Vielman,CONTADOR GENERAL SENIOR,GUATEMALA,ADMINISTRACION,Jorge Antonio De León Pinillos,ddubon@grupotritech.com,jdeleon@grupotritech.com,Si,Si
+Gerber Omar Barillas Monterroso,BODEGUERO,GUATEMALA,OPERACIONES,Carmen Isabel Pérez Rodriguez,gbarillas@grupotritech.com,cperez@grupotritech.com,Si,No
+José Javier Posadas Morales,GERENTE DE PROCESOS DE OPERACIONES,GUATEMALA,OPERACIONES,Ignacio Quiros Amieva,jposadas@grupotritech.com,iquiros@grupotritech.com,No,Si
+Jorge Enrique Chávez Ocaña,GERENTE CORPORATIVO DE RECURSOS HUMANOS,GUATEMALA,DIRECCION GENERAL,Ignacio Quiros Amieva,jorge.chavez@grupoprecon.com,iquiros@grupotritech.com,Si,Si
+Jorge Guillermo Cruz-Gomar Maldonado,GERENTE DE VENTAS REGIONAL,GUATEMALA,DIRECCION GENERAL,Ignacio Quiros Amieva,gcruzgomar@grupotritech.com,iquiros@grupotritech.com,Si,Si
+Jose Alejandro Galo Garcia,INGENIERO DE SERVICIO,NICARAGUA,VENTAS,Manuel Roberto Campos Perez,jgalo@grupotritech.com,mcampos@grupotritech.com,Si,No
+Jose Martin Zurita Reyes,ASESOR DE VENTAS,MEXICO,VENTAS,José Antonio Maqueda Tapia,mzurita@grupotritech.com,jamaqueda@grupotritech.com,No,No
+Juan Antonio Cedeño Rivas,INGENIERO DE SERVICIO,MEXICO,VENTAS,David Farabundo Pérez González,jcedeno@grupotritech.com,dperez@grupotritech.com,No,No
+Juan de Dios Fuentes Morales,ASESOR TECNICO,GUATEMALA,VENTAS,Moises Arnoldo Giron Ramirez,jdfuentes@grupotritech.com,mgiron@grupotritech.com,No,No
+Kevin Joseph Cruz López,ASESOR TECNICO,COSTA RICA,VENTAS,Leonardo Mata Arrieta,kcruz@grupotritech.com,lmata@grupotritech.com,No,No
+Luis Alberto Sánchez Contreras,ASESOR TECNICO,MEXICO,VENTAS,Roberto Marquez Merino,lsanchez@grupotritech.com,rmarquez@grupotritech.com,No,No
+Luis Angel Lugo Gomez,BODEGUERO,MEXICO,OPERACIONES,Norma Francisca Sánchez Pérez,almacen.norte@grupotritech.com,sac.norte@grupotritech.com,No,No
+Marco Antonio Hernandez Muñiz,ASESOR TECNICO,MEXICO,VENTAS,José Antonio Maqueda Tapia,mhernandez@grupotritech.com,jamaqueda@grupotritech.com,No,No
+Marlon Oswaldo Cajina Aguilar,INGENIERO DE SERVICIO,NICARAGUA,VENTAS,Manuel Roberto Campos Perez,mcajina@grupotritech.com,mcampos@grupotritech.com,No,No
+Neftalí Sanchez Melendrez,COORDINADOR TECNICO,GUATEMALA,VENTAS,Moises Arnoldo Giron Ramirez/José Luis Ezquerra Galiano,nsanchez@grupotritech.com,"mgiron@grupotritech.com, jezquerra@grupotritech.com",No,No
+Norma Francisca Sánchez Pérez,COORDINADORA REGIONAL DE OPERACIONES,MEXICO,OPERACIONES,Ana Gabriela Bruno Beltrán,sac.norte@grupotritech.com,abeltran@grupotritech.com,No,No
+Orlando David Morales Ochoa,ASESOR TECNICO,GUATEMALA,VENTAS,Moises Arnoldo Giron Ramirez,tecnicogt@grupotritech.com,mgiron@grupotritech.com,No,No
+Paola Belen Policarpo Hernández,COORDINADORA REGIONAL DE OPERACIONES,MEXICO,OPERACIONES,Ana Gabriela Bruno Beltrán,sac.bajio@grupotritech.com,abeltran@grupotritech.com,No,No
+Miriam Sofía Sifontes García,COORDINADOR LOGISTICA,GUATEMALA,OPERACIONES,José Javier Posadas Morales,mmatheu@grupotritech.com,jposadas@grupotritech.com,Si,No
+Leonardo Gonzalez Diaz,ASESOR DE VENTAS,MEXICO,VENTAS,Roberto Marquez Merino,lgonzalez@grupotritech.com,rmarquez@grupotritech.com,No,No
+Oscar Rodrigo Gómez Gutiérrez,INGENIERO DE SERVICIO,MEXICO,VENTAS,José Antonio Maqueda Tapia,rgomez@grupotritech.com,jamaqueda@grupotritech.com,Si,No
+Juan Carlos Leon Cruz,ASESOR DE VENTAS,MEXICO,VENTAS,Armando Centeno López,jleon@grupotritech.com,acenteno@grupotritech.com,Si,No
+Kevin Ramon Torrez Palavicine,BODEGUERO,NICARAGUA,OPERACIONES,Paula Fabiola Chaves Benavides,sac.nicaragua@grupotritech.com,fchaves@grupotritech.com,Si,No
+Melvin Andres Figuereo Castillo,ASESOR TECNICO,DOMINICANA,VENTAS,Ronald Efraín Paz Ovalle,mfiguereo@grupotritech.com,rpaz@grupotritech.com,No,Si
+Juan Carlos Torres Vargas,ASESOR DE VENTAS,HONDURAS,VENTAS,Manuel Roberto Campos Perez,jtorres@grupotritech.com,mcampos@grupotritech.com,Si,No
+Kimberly Julisa Urias Ajualip,AUXILIAR CONTABLE,GUATEMALA,ADMINISTRACION,Estrella Rubí Palencia Monzón,kurias@grupotritech.com,epalencia@grupotritech.com,Si,No
+Julio Cesar Jiménez Fragoso,GERENTE ADMINISTRATIVO,MEXICO,ADMINISTRACION,Jorge Antonio De León Pinillos,jcjimenez@grupotritech.com,jdeleon@grupotritech.com,No,Si
+Julio Enrique Fuentes Del Aguila,COORDINADOR CONTABLE,GUATEMALA,ADMINISTRACION,Jorge Antonio De León Pinillos,jfuentes@grupotritech.com,jdeleon@grupotritech.com,No,Si
+Julio Ernesto Sánchez Ramos,CONTADOR GENERAL SENIOR,EL SALVADOR,ADMINISTRACION,Jorge Antonio De León Pinillos,jsanchez@grupotritech.com,jdeleon@grupotritech.com,No,Si
+Manuel Roberto Flores Arias,ASESOR TECNICO,EL SALVADOR,VENTAS,Manuel Roberto Campos Perez,mflores@grupotritech.com,mcampos@grupotritech.com,Si,No
+Karina Pérez López,GERENTE REGIONAL DE SYSO,MEXICO,DIRECCION GENERAL,Ignacio Quiros Amieva,kperez@grupotritech.com,iquiros@grupotritech.com,No,Si
+Leonardo Mata Arrieta,GERENTE DE VENTAS,COSTA RICA,VENTAS,Jorge Guillermo Cruz-Gomar Maldonado,lmata@grupotritech.com,gcruzgomar@grupotritech.com,No,Si
+Manuel Roberto Campos Perez,GERENTE DE VENTAS,EL SALVADOR,VENTAS,Jorge Guillermo Cruz-Gomar Maldonado,mcampos@grupotritech.com,gcruzgomar@grupotritech.com,No,Si
+Luis Osvaldo Gómez Oviedo,INGENIERO DE SERVICIO,COSTA RICA,VENTAS,Leonardo Mata Arrieta,ogomez@grupotritech.com,lmata@grupotritech.com,Si,Si
+Marco Vinicio Juárez Ordóñez,AUDITOR,GUATEMALA,ADMINISTRACION,Jorge Antonio De León Pinillos/Julian Saldana,mjuarez@grupotritech.com,"jdeleon@grupotritech.com, julian.saldana@grupoprecon.com",No,No
+Moises Arnoldo Giron Ramirez,GERENTE DE VENTAS,GUATEMALA,VENTAS,Jorge Guillermo Cruz-Gomar Maldonado,mgiron@grupotritech.com,gcruzgomar@grupotritech.com,No,Si
+Luis Diego Fernández Montero,ASESOR TECNICO,COSTA RICA,VENTAS,Leonardo Mata Arrieta,lfernandez@grupotritech.com,lmata@grupotritech.com,Si,Si
+Luis Gabriel Ramírez Morales,ASESOR TECNICO,MEXICO,VENTAS,José Antonio Maqueda Tapia,lramirez@grupotritech.com,jamaqueda@grupotritech.com,Si,No
+Luis Estuardo Godoy Ramirez,ASESOR DE VENTAS,GUATEMALA,VENTAS,Moises Arnoldo Giron Ramirez/José Luis Ezquerra Galiano,lgodoy@grupotritech.com,"mgiron@grupotritech.com, jezquerra@grupotritech.com",Si,No
+Lucio Hugo Vazquez Cruz,ASESOR TECNICO,MEXICO,VENTAS,Roberto Marquez Merino,lvazquez@grupotritech.com,rmarquez@grupotritech.com,Si,No
+Luis Enrique Castillo Castillo,INGENIERO DE SERVICIO,PANAMA,VENTAS,Ronald Efraín Paz Ovalle,lcastillo@grupotritech.com,rpaz@grupotritech.com,Si,Si
+Pedro Luis Silva Velásquez,ASESOR TECNICO,GUATEMALA,VENTAS,Moises Arnoldo Giron Ramirez/José Luis Ezquerra Galiano,psilva@grupotritech.com,"mgiron@grupotritech.com, jezquerra@grupotritech.com",No,No
+Roberto Marquez Merino,GERENTE DE VENTAS,MEXICO,VENTAS,Alfonso José Irungaray Pellecer,rmarquez@grupotritech.com,airungaray@grupotritech.com,No,No
+Robinson Romero Garzón,INGENIERO DE SERVICIO,COLOMBIA,VENTAS,Leonardo Mata Arrieta,rromero@grupotritech.com,lmata@grupotritech.com,No,No
+Ruben Torres Bautista,ASESOR TECNICO,MEXICO,VENTAS,José Antonio Maqueda Tapia,rtorres@grupotritech.com,jamaqueda@grupotritech.com,No,No
+Salvador Lopez Araujo,ASESOR DE VENTAS,MEXICO,VENTAS,José Antonio Maqueda Tapia,slaraujo@grupotritech.com,jamaqueda@grupotritech.com,No,No
+Silvia Maya Martinez,ANALISTA CONTABLE,MEXICO,ADMINISTRACION,Julio Cesar Jiménez Fragoso,smaya@grupotritech.com,jcjimenez@grupotritech.com,No,No
+Stephanie Hernández González,ANALISTA DE CREDITO Y COBRO,MEXICO,ADMINISTRACION,Julio Cesar Jiménez Fragoso,shernandez@grupotritech.com,jcjimenez@grupotritech.com,No,No
+Victor Sandoval Ramírez,ASESOR TECNICO,MEXICO,VENTAS,David Farabundo Pérez González,vsandoval@grupotritech.com,dperez@grupotritech.com,No,No
+Zuly Daisy Guerra Santos,COORDINADORA REGIONAL DE OPERACIONES,MEXICO,OPERACIONES,Ana Gabriela Bruno Beltrán,sac.centro@grupotritech.com,abeltran@grupotritech.com,No,No
+Luis Enrique Contreras Concuá,EJECUTIVO CREATIVO,GUATEMALA,ADMINISTRACION,Ignacio Quiros Amieva,lconcua@grupotritech.com,iquiros@grupotritech.com,Si,Si
+Ricardo Emanuel Gutiérrez Cortés,ASESOR DE VENTAS,MEXICO,VENTAS,David Farabundo Pérez González,rgutierrez@grupotritech.com,dperez@grupotritech.com,Si,No
+Ivan Antonio Galindo Minera,GERENTE CORPORATIVO DE INFORMÁTICA ,GUATEMALA,DIRECCION GENERAL,Ignacio Quiros Amieva,igalindo@grupotritech.com,iquiros@grupotritech.com,Si,Si
+Ana Lucía Veliz García,COORDINADORA DE RECURSOS HUMANOS,GUATEMALA,DIRECCION GENERAL,Ignacio Quiros Amieva/Jorge Enrique Chávez Ocaña,aveliz@grupotritech.com,"iquiros@grupotritech.com, jorge.chavez@grupoprecon.com",No,Si
+Sebastián Cáceres Rosales,SOPORTE TECNICO IT,GUATEMALA,ADMINISTRACION,Jorge Antonio De León Pinillos,srosales@grupotritech.com,jdeleon@grupotritech.com,Si,Si
+Emilio Chavez Carrillo,REPARTO,GUATEMALA,OPERACIONES,Carmen Isabel Pérez Rodriguez,emilio.chavez@grupotritech.com,cperez@grupotritech.com,No,No
+Ignacio Quiros Amieva,DIRECTOR GENERAL,GUATEMALA,DIRECCION GENERAL,N/A,iquiros@grupotritech.com,N/A,No,No
+Eddy  Daniel Montenegro Barrios,MENSAJERO COBRADOR,GUATEMALA,ADMINISTRACION,Estrella Rubí Palencia Monzón,eddy.montenegro@grupotritech.com,epalencia@grupotritech.com,No,No
+Reyna María Burrión Osoy De Monterroso,ENCARGADO DE LIMPIEZA Y MANTENIMIENTO,GUATEMALA,ADMINISTRACION,Estrella Rubí Palencia Monzón,reyna.burrion@grupotritech.com,epalencia@grupotritech.com,No,No
+Lidieth Quirós Castro,ENCARGADO DE LIMPIEZA Y MANTENIMIENTO,COSTA RICA,ADMINISTRACION,Claudio Villalobos Monestel,lidieth.castro@grupotritech.com,cvillalobos@grupotritech.com,No,No
+Gonzalo Damian Ascencion Sahagun,ASESOR DE VENTAS,MEXICO,VENTAS,David Farabundo Pérez González,gascencion@grupotritech.com,dperez@grupotritech.com,No,No
+Jordy Morel Perez Revolorio,ASISTENTE DE RECURSOS HUMANOS,GUATEMALA,DIRECCION GENERAL,Ignacio Quiros Amieva,jmperez@grupotritech.com,iquiros@grupotritech.com,Si,Si
+Víctor Omar Zepeda Quiroz,REPARTO,HONDURAS,OPERACIONES,Carmen Isabel Pérez Rodriguez,vzepeda@grupotritech.com,cperez@grupotritech.com,Si,No
+Wilfredo Carias Fernandez,INGENIERO DE SERVICIO,HONDURAS,VENTAS,Manuel Roberto Campos Perez,wcarias@grupotritech.com,mcampos@grupotritech.com,Si,No
+Elvis Bolivar González Pimentel,INGENIERO DE SERVICIO,PANAMA,VENTAS,Ronald Efraín Paz Ovalle,egonzalez@grupotritech.com,rpaz@grupotritech.com,Si,Si
+Raul Edgardo Alas Murcia,INGENIERO DE SERVICIO,EL SALVADOR,VENTAS,Manuel Roberto Campos Perez,ralas@grupotritech.com,mcampos@grupotritech.com,Si,No
+Ruben Amir Atencio Quiel,ASESOR DE VENTAS,PANAMA,VENTAS,Ronald Efraín Paz Ovalle,ratencio@grupotritech.com,rpaz@grupotritech.com,Si,Si
+Sebastian Quesada Picado,BODEGUERO,COSTA RICA,OPERACIONES,Paula Fabiola Chaves Benavides,squesada@grupotritech.com,fchaves@grupotritech.com,Si,No
+Pedro Luis Rosario,BODEGUERO,DOMINICANA,OPERACIONES,Paula Fabiola Chaves Benavides,sac.dominicana@grupotritech.com,fchaves@grupotritech.com,Si,No
+Paula Fabiola Chaves Benavides,COORDINADORA REGIONAL DE OPERACIONES,COSTA RICA,OPERACIONES,Ignacio Quiros Amieva,fchaves@grupotritech.com,iquiros@grupotritech.com,Si,Si
+Eddy Elias Villatoro Gómez,COORDINADOR IT,GUATEMALA,DIRECCION GENERAL,Jorge Antonio De León Pinillos/Ivan Antonio Galindo Minera,evillatoro@grupotritech.com,"jdeleon@grupotritech.com, igalindo@grupotritech.com",No,Si
+Cesar Cortes Rojas,SOPORTE TECNICO IT,MEXICO,ADMINISTRACION,Jorge Antonio De León Pinillos,ccortes@grupotritech.com,jdeleon@grupotritech.com,Si,Si
+Ronald Efraín Paz Ovalle,GERENTE DE VENTAS,PANAMA,VENTAS,Jorge Guillermo Cruz-Gomar Maldonado,rpaz@grupotritech.com,gcruzgomar@grupotritech.com,Si,Si
+Victor Manuel Rivera Méndez,INGENIERO DE SERVICIO,DOMINICANA,VENTAS,Jorge Guillermo Cruz-Gomar Maldonado,vrivera@grupotritech.com,gcruzgomar@grupotritech.com,Si,Si
+Julian Saldana,,GUATEMALA,DIRECCIÓN GENERAL,,julian.saldana@grupoprecon.com,,No,No

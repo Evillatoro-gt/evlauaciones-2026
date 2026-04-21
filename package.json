@@ -5,7 +5,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "export:deva": "node scripts/export-to-deva.js"
+    "export:deva": "node scripts/export-to-deva.js",
+    "export:reporte": "node scripts/export-report.js"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.3.1",
